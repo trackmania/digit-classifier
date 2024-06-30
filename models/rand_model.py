@@ -4,10 +4,8 @@ from interface import DigitClassificationInterface
 class RandomModel(DigitClassificationInterface):
     def predict(self, image: np.ndarray) -> int:
         # Center crop of the image (10x10 from the center)
-        if image.shape != (28, 28):
-            raise ValueError("Input image must be of shape (28, 28)")
-        
         center_crop = image[9:19, 9:19]
+        
         print("Predicting with Random model using center crop")
         return np.random.randint(0, 10)
     

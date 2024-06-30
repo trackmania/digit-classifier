@@ -4,9 +4,6 @@ from interface import DigitClassificationInterface
 class RandomForestModel(DigitClassificationInterface):
     def predict(self, image: np.ndarray) -> int:
         # Flatten the image for the Random Forest model
-        if image.shape != (28, 28):
-            raise ValueError("Input image must be of shape (28, 28)")
-        
         flattened_image = image.flatten()
         
         print("Predicting with Random Forest model")
