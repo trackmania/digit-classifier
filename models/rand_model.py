@@ -3,7 +3,7 @@ from interface import DigitClassificationInterface
 
 class RandomModel(DigitClassificationInterface):
     def predict(self, image: np.ndarray) -> int:
-        # Center crop of the image (10x10 from the center)
+        # Center crop of the image
         center_crop = image[9:19, 9:19]
         
         print("Predicting with Random model using center crop")
